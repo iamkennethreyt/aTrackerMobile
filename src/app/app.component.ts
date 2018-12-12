@@ -1,30 +1,59 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { Component, ViewChild } from "@angular/core";
+import { Nav, Platform } from "ionic-angular";
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { HomePage } from "../pages/home/home";
+import { ListPage } from "../pages/list/list";
+import { AccountSettingsApplicantPage } from "../pages/AccountSettingsApplicantPage/AccountSettingsApplicantPage";
+import { AccountSettingsEmployerPage } from "../pages/AccountSettingsEmployerPage/AccountSettingsEmployerPage";
+import { AdvertisementsApplicantPage } from "../pages/AdvertisementsApplicantPage/AdvertisementsApplicantPage";
+import { AdvertisementsEmployerPage } from "../pages/AdvertisementsEmployerPage/AdvertisementsEmployerPage";
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string; component: any; icon: string }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      { title: "Home (0)", component: HomePage, icon: "md-home" },
+      {
+        title: "Account Settings Applicant",
+        component: AccountSettingsApplicantPage,
+        icon: "md-settings"
+      },
+      {
+        title: "Account Settings Employer",
+        component: AccountSettingsEmployerPage,
+        icon: "md-settings"
+      },
+      {
+        title: "Advertisement Applicant",
+        component: AdvertisementsApplicantPage,
+        icon: "md-megaphone"
+      },
+      {
+        title: "Advertisement Employer",
+        component: AdvertisementsEmployerPage,
+        icon: "md-megaphone"
+      },
+      { title: "Applicants", component: ListPage, icon: "md-people" },
+      { title: "About Us", component: ListPage, icon: "md-information-circle" },
+      { title: "Sign Out", component: null, icon: "md-log-out" }
     ];
-
   }
 
   initializeApp() {

@@ -1,19 +1,25 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+  <ion-header class="bar bar-header bar-assertive">
+    <ion-toolbar color="danger"> <ion-title>Menu</ion-title> </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="card-background-page">
+    <ion-card>
+      <img
+        src="https://png.pngtree.com/element_origin_min_pic/17/01/08/82d5628f2f8b44a35aaf1b9808ef6064.jpg"
+      />
+
+      <div class="card-title">Name of the User</div>
+      <div class="card-subtitle">Some Details</div>
+    </ion-card>
+
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <ion-icon color="danger" name="{{p.icon}}" item-start></ion-icon>
+        <p>{{ p.title }}</p>
       </button>
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
