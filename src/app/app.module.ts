@@ -10,6 +10,8 @@ import { AccountSettingsApplicantPage } from "../pages/AccountSettingsApplicantP
 
 import { AdvertisementsApplicantPage } from "../pages/AdvertisementsApplicantPage/AdvertisementsApplicantPage";
 import { AdvertisementsEmployerPage } from "../pages/AdvertisementsEmployerPage/AdvertisementsEmployerPage";
+import { ApplicantPage } from "../pages/ApplicantPage/ApplicantPage";
+import { AboutPage } from "../pages/AboutPage/AboutPage";
 
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
@@ -22,7 +24,9 @@ import { SplashScreen } from "@ionic-native/splash-screen";
     AccountSettingsEmployerPage,
     AccountSettingsApplicantPage,
     AdvertisementsApplicantPage,
-    AdvertisementsEmployerPage
+    AdvertisementsEmployerPage,
+    ApplicantPage,
+    AboutPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
@@ -33,7 +37,9 @@ import { SplashScreen } from "@ionic-native/splash-screen";
     AccountSettingsEmployerPage,
     AccountSettingsApplicantPage,
     AdvertisementsApplicantPage,
-    AdvertisementsEmployerPage
+    AdvertisementsEmployerPage,
+    ApplicantPage,
+    AboutPage
   ],
   providers: [
     StatusBar,

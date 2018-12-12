@@ -2,13 +2,14 @@ import { Component, ViewChild } from "@angular/core";
 import { Nav, Platform } from "ionic-angular";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
-
+import { AboutPage } from "../pages/AboutPage/AboutPage";
 import { HomePage } from "../pages/home/home";
-import { ListPage } from "../pages/list/list";
+
 import { AccountSettingsApplicantPage } from "../pages/AccountSettingsApplicantPage/AccountSettingsApplicantPage";
 import { AccountSettingsEmployerPage } from "../pages/AccountSettingsEmployerPage/AccountSettingsEmployerPage";
 import { AdvertisementsApplicantPage } from "../pages/AdvertisementsApplicantPage/AdvertisementsApplicantPage";
 import { AdvertisementsEmployerPage } from "../pages/AdvertisementsEmployerPage/AdvertisementsEmployerPage";
+import { ApplicantPage } from "../pages/ApplicantPage/ApplicantPage";
 
 @Component({
   templateUrl: "app.html"
@@ -50,8 +51,12 @@ export class MyApp {
         component: AdvertisementsEmployerPage,
         icon: "md-megaphone"
       },
-      { title: "Applicants", component: ListPage, icon: "md-people" },
-      { title: "About Us", component: ListPage, icon: "md-information-circle" },
+      { title: "Applicants", component: ApplicantPage, icon: "md-people" },
+      {
+        title: "About Us",
+        component: AboutPage,
+        icon: "md-information-circle"
+      },
       { title: "Sign Out", component: null, icon: "md-log-out" }
     ];
   }
