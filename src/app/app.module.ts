@@ -4,15 +4,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from "ionic-angular";
 
 import { MyApp } from "./app.component";
 import { HomePage } from "../pages/home/home";
-import { ListPage } from "../pages/list/list";
-import { AccountSettingsEmployerPage } from "../pages/AccountSettingsEmployerPage/AccountSettingsEmployerPage";
-import { AccountSettingsApplicantPage } from "../pages/AccountSettingsApplicantPage/AccountSettingsApplicantPage";
-
-import { AdvertisementsApplicantPage } from "../pages/AdvertisementsApplicantPage/AdvertisementsApplicantPage";
-import { AdvertisementsEmployerPage } from "../pages/AdvertisementsEmployerPage/AdvertisementsEmployerPage";
-import { ApplicantPage } from "../pages/ApplicantPage/ApplicantPage";
+import { AttendancePage } from "../pages/AttendancePage/AttendancePage";
+import { AccountSettingPage } from "../pages/AccountSettingPage/AccountSettingPage";
 import { AboutPage } from "../pages/AboutPage/AboutPage";
-
+import { StudentsPage } from "../pages/StudentsPage/StudentsPage";
 import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 
@@ -20,26 +15,20 @@ import { SplashScreen } from "@ionic-native/splash-screen";
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    AccountSettingsEmployerPage,
-    AccountSettingsApplicantPage,
-    AdvertisementsApplicantPage,
-    AdvertisementsEmployerPage,
-    ApplicantPage,
-    AboutPage
+    AccountSettingPage,
+    AboutPage,
+    AttendancePage,
+    StudentsPage
   ],
   imports: [BrowserModule, IonicModule.forRoot(MyApp)],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
-    AccountSettingsEmployerPage,
-    AccountSettingsApplicantPage,
-    AdvertisementsApplicantPage,
-    AdvertisementsEmployerPage,
-    ApplicantPage,
-    AboutPage
+    AccountSettingPage,
+    AboutPage,
+    AttendancePage,
+    StudentsPage
   ],
   providers: [
     StatusBar,

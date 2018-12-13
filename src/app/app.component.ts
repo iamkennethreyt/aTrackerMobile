@@ -4,13 +4,10 @@ import { StatusBar } from "@ionic-native/status-bar";
 import { SplashScreen } from "@ionic-native/splash-screen";
 import { AboutPage } from "../pages/AboutPage/AboutPage";
 import { HomePage } from "../pages/home/home";
-
-import { AccountSettingsApplicantPage } from "../pages/AccountSettingsApplicantPage/AccountSettingsApplicantPage";
-import { AccountSettingsEmployerPage } from "../pages/AccountSettingsEmployerPage/AccountSettingsEmployerPage";
-import { AdvertisementsApplicantPage } from "../pages/AdvertisementsApplicantPage/AdvertisementsApplicantPage";
-import { AdvertisementsEmployerPage } from "../pages/AdvertisementsEmployerPage/AdvertisementsEmployerPage";
-import { ApplicantPage } from "../pages/ApplicantPage/ApplicantPage";
-
+import { AccountSettingPage } from "../pages/AccountSettingPage/AccountSettingPage";
+import { AttendancePage } from "../pages/AttendancePage/AttendancePage";
+import { StudentsPage } from "../pages/StudentsPage/StudentsPage";
+//StudentsPage
 @Component({
   templateUrl: "app.html"
 })
@@ -32,26 +29,20 @@ export class MyApp {
     this.pages = [
       { title: "Home (0)", component: HomePage, icon: "md-home" },
       {
-        title: "Account Settings Applicant",
-        component: AccountSettingsApplicantPage,
+        title: "Account Setting",
+        component: AccountSettingPage,
         icon: "md-settings"
       },
       {
-        title: "Account Settings Employer",
-        component: AccountSettingsEmployerPage,
-        icon: "md-settings"
+        title: "Attendance",
+        component: AttendancePage,
+        icon: "md-list-box"
       },
       {
-        title: "Advertisement Applicant",
-        component: AdvertisementsApplicantPage,
-        icon: "md-megaphone"
+        title: "Students List",
+        component: StudentsPage,
+        icon: "md-contacts"
       },
-      {
-        title: "Advertisement Employer",
-        component: AdvertisementsEmployerPage,
-        icon: "md-megaphone"
-      },
-      { title: "Applicants", component: ApplicantPage, icon: "md-people" },
       {
         title: "About Us",
         component: AboutPage,
